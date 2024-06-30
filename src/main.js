@@ -67,6 +67,7 @@ form.addEventListener('submit', async event => {
         showLoader()
         form.reset();
         gallery.innerHTML = '';
+        lightbox.refresh();
       
         try {
             const data = await getImage(query, currentPage);
@@ -86,6 +87,7 @@ form.addEventListener('submit', async event => {
         // form.reset();
         updateBtnStatus();
     }
+     lightbox.refresh();
 })
 
 
